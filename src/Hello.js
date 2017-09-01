@@ -94,6 +94,8 @@ import React, {Component} from 'react';
 
 //another Demo for ’方式三‘ ，controlled component,one Demo for form
 
+import PropTypes from 'prop-types';
+
 class NameForm extends Component{
     constructor(props){
         super(props);
@@ -107,6 +109,7 @@ class NameForm extends Component{
         this.setState({
             value: event.target.value
         })
+        console.log(this.props);
     }
     handleSubmit(event){
         alert('a name has been commited' + this.state.value)
@@ -130,5 +133,8 @@ class NameForm extends Component{
         )
     }
 }
-
+//可以给组件指定默认的props
+NameForm.defaultProps = {
+    name: 'Stranger'
+};
 export default NameForm;

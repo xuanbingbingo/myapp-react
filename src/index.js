@@ -6,5 +6,6 @@ import Hello from './Hello';
 import registerServiceWorker from './registerServiceWorker';
 
 // ReactDOM.render(<App name='hehe'/>, document.getElementById('root'));
-ReactDOM.render(<Hello date={new Date()} />, document.getElementById('root'));
+const props = {firstName:'bingo',lastName:'li'}
+ReactDOM.render(<Hello {...props} date={new Date()} />, document.getElementById('root'));
 registerServiceWorker();
