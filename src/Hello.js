@@ -104,11 +104,26 @@ class NameForm extends Component{
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        // this.getMoviesFromApiAsync = this.getMoviesFromApiAsync(this);
     }
+    // getMoviesFromApiAsync() {
+    //     return fetch('https://facebook.github.io/react-native/movies.json')
+    //       .then((response) => {
+    //           return response.json();
+    //         })
+    //       .then((responseJson) => {
+    //           console.log(responseJson);
+    //         return responseJson.movies;
+    //       })
+    //       .catch((error) => {
+    //         console.error(error);
+    //       });
+    //   }
     handleChange(event){
         this.setState({
             value: event.target.value
         })
+        // this.getMoviesFromApiAsync();
         console.log(this.props);
     }
     handleSubmit(event){
